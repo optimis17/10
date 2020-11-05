@@ -5,17 +5,30 @@
 
 int main(int argc, char *argv[]) {
 	
-	int a=3;
-	int b=5;
-	swap(&a,&b);
-	printf("a:%i, b:%i\n",a,b);
+	int i;
+	int grade[5];
+	int sum;
+	
+	for(i=0;i<5;i++)
+	{
+		printf("input value[%i]=",i);
+		scanf("%d",&grade[i]);
+	}
+	
+	for(i=0;i<5;i++)
+		printf("grade[%d]=%d\n",i,grade[i]);
+		
+	for(i=0;i<5;i++)
+	{
+		
+		sum+=grade[i];		
+	}
+	
+	printf("average: %d",sum/5);
+	
+	
 	
 	return 0;
 }
 
-void swap(int *x,int *y){
-	int temp;
-	temp=*x;
-	*x=*y;
-	*y=temp;
-}
+
